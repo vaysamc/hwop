@@ -21,7 +21,6 @@ public class Radio {
 
     public void fullUpVolume() {
         if (currentChannel == 100) {
-            currentChannel = 100;
         }
     }
 
