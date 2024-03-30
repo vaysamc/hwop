@@ -7,8 +7,8 @@ public class RadioTest {
     @Test
     public void shouldSetVolume() {
         Radio volume = new Radio();
-        volume.currentVolume = 93;
-        int expected = 93;
+        volume.currentVolume = 90;
+        int expected = 90;
         int actual = volume.currentVolume;
         Assertions.assertEquals(expected, actual);
 
@@ -17,8 +17,8 @@ public class RadioTest {
     @Test
     public void shouldSetChannel() {
         Radio channel = new Radio();
-        channel.currentChannel = 5;
-        int expected = 5;
+        channel.currentChannel = 9;
+        int expected = 9;
         int actual = channel.currentChannel;
         Assertions.assertEquals(expected, actual);
 
