@@ -7,6 +7,10 @@ public class Radio {
         currentVolume = 100;
     }
 
+    public void setToMinVol() {
+        currentVolume = 0;
+    }
+
     public void increaseVolume() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
@@ -35,6 +39,10 @@ public class Radio {
 
     public void setToMaxChan() {
         currentChannel = 9;
+    }
+
+    public void setToMinChan() {
+        currentChannel = 0;
     }
 
 

@@ -140,5 +140,27 @@ public class RadioTest {
 
     }
 
+    @Test
+    public void setMinVolume() {
+        Radio volume = new Radio();
+        volume.currentVolume = 56;
+        volume.setToMinVol();
 
+        int expected = 0;
+        int actual = volume.currentVolume;
+        Assertions.assertEquals(expected, actual);
+
+    }
+
+    @Test
+    public void setMinChan() {
+        Radio channel = new Radio();
+        channel.currentChannel = 5;
+        channel.setToMinChan();
+
+        int expected = 0;
+        int actual = channel.currentChannel;
+        Assertions.assertEquals(expected, actual);
+
+    }
 }
