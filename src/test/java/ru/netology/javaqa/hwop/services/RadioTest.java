@@ -27,6 +27,7 @@ public class RadioTest {
     @Test
     public void shouldSetMaxChannel() {
         Radio channel = new Radio();
+        channel.currentChannel = 5;
         channel.setToMaxChan();
         int expected = 9;
         int actual = channel.currentChannel;
