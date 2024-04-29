@@ -83,9 +83,6 @@ public class RadioTest {
     }
 
 
-
-
-
     @Test
     public void shouldSetChannel() {
         Radio channel = new Radio();
