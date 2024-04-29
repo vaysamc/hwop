@@ -1,10 +1,26 @@
 package ru.netology.javaqa.hwop.services;
 
 public class Radio {
-    public int currentVolume;
+    private int currentVolume;
+
+    private int currentChannel;
+
+    public int getCurrentVolume(){
+        return currentVolume;
+    }
 
 
 
+
+    public void setCurrentVolume(int newCurrentVolume) {
+        if (newCurrentVolume <0) {
+            newCurrentVolume = 0;
+        }
+        if (newCurrentVolume >100) {
+            newCurrentVolume = 100;
+        }
+        currentVolume = newCurrentVolume;
+    }
     public void setToMaxVol() {
         currentVolume = 100;
     }
@@ -14,28 +30,27 @@ public class Radio {
     }
 
     public void increaseVolume() {
-            currentVolume = currentVolume + 1;
+
+        currentVolume = currentVolume + 1;
     }
 
     public void decreaseVolume() {
-            currentVolume = currentVolume - 1;
-
+        currentVolume = currentVolume - 1;
     }
 
-    public void fullUpVolume() {
-        currentChannel = 100;
-
+    public void setCurrentChannel(int newCurrentChannel) {
+        if (newCurrentChannel <0) {
+            newCurrentChannel = 9;
+        }
+        if (newCurrentChannel >9) {
+            newCurrentChannel = 0;
+        }
+        currentChannel = newCurrentChannel;
     }
 
-    public void fullDownVolume() {
-            currentChannel = 0;
-
-    }
-
-
-    public int currentChannel;
-
-
+  public int getCurrentChannel(){
+      return currentChannel;
+  }
     public void setToMaxChan() {
         currentChannel = 9;
     }
@@ -46,22 +61,14 @@ public class Radio {
 
 
     public void increaseChannel() {
-
-            currentChannel = currentChannel + 1;
-
+        currentChannel = currentChannel + 1;
     }
 
     public void decreaseChannel() {
         currentChannel = currentChannel - 1;
     }
 
-    public void fullUpChannel() {
-        currentChannel = 0;
-    }
 
-    public void fullDownChannel() {
-            currentChannel = 9;
-    }
 
 
 }
